@@ -84,12 +84,13 @@ h1 {
 	height: 50px;
 	border: 2px solid black;
 	font-family: 'Baloo Bhai', cursive;
+	font-size: 20px;
 }
 .reset:hover {
 	background-color: yellow;
 }
 .bottom {
-	width: 70%;
+	width: 90%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
