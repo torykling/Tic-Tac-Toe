@@ -7,6 +7,7 @@ function createBoard() {
 	// sets the turn value
 	let turn = document.querySelector(".turn");
 	turn.innerText = "Blue's turn"
+	turn.style.color = "blue";
 	// creates the buttons
 	for (let i=0; i < 9; i++) {
 		container.appendChild(document.createElement("button"));
@@ -22,12 +23,14 @@ function createBoard() {
 			if (turn.innerText === "Blue's turn") {
 				buttons[i].classList.add("blue");
 				turn.innerText = "Red's turn";
+				turn.style.color = "red";
 				round += 1;
 				e.target.removeEventListener(e.type, arguments.callee);
 				checkForWinners();
 			} else if (turn.innerText === "Red's turn") {
 				buttons[i].classList.add("red");
 				turn.innerText = "Blue's turn";
+				turn.style.color = "blue";
 				round += 1;
 				e.target.removeEventListener(e.type, arguments.callee);
 				checkForWinners();

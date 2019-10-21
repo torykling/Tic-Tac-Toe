@@ -1,13 +1,21 @@
+body {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 h1 {
-	margin: 0 auto;
-	width: 40%;
+/*	margin: 0 auto;
+	width: 40%;*/
+	font-family: 'Baloo Bhai', cursive;
+	font-size: 50px;
 }
 .container {
 	display: inline-grid;
 	grid-template-rows: 150px 150px 150px;
 	grid-template-columns: 150px 150px 150px;
 	border: 2px solid black;
-	margin: 0 auto;
 }
 
 #one {
@@ -71,5 +79,15 @@ h1 {
 	background-color: red;
 }
 .winner {
-	font-size: 20px;
+	font-size: 40px;
+	font-family: 'Baloo Bhai', cursive;
+}
+.turn {
+	font-size: 40px;
+	font-family: 'Baloo Bhai', cursive;
+/*	width: 50%;
+	margin: 0 auto;*/
+}
+input[type=submit] {
+	font-family: 'Baloo Bhai', cursive;
 }
