@@ -46,29 +46,21 @@ reset.addEventListener("submit", function(e) {
 	container.innerHTML = "";
 	createBoard();
 	winner.innerText = "";
+	round = 0;
 })
 
-// // figuring out how to check for winners
-
-// let buttonClasses = [buttons[0].classList.value, buttons[1].classList.value, buttons[2].classList.value, buttons[3].classList.value, buttons[4].classList.value, buttons[5].classList.value, buttons[6].classList.value, buttons[7].classList.value, buttons[8].classList.value];
-// let numOfSquaresClicked = 0;
-// 	for(let i=0; i <buttonClasses.length; i++) {
-// 		if (buttonClasses[i] !== "") {
-// 			numOfSquaresClicked += 1;
-// 		}
-// 	}
 function checkForWinners() {
 	let buttons = document.querySelectorAll("button");
 	let winningIndices = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6], [0, 4, 8]];
 	for (let i =0; i < winningIndices.length; i++) {
 		if ((buttons[winningIndices[i][0]].classList.value=== "blue") && (buttons[winningIndices[i][1]].classList.value==="blue") && (buttons[winningIndices[i][2]].classList.value==="blue")) {
-			winner.innerText = "Blue Wins!"
+			winner.innerText = "Blue Wins! Press Reset to play again!"
 			console.log("blue wins")
 		} else if ((buttons[winningIndices[i][0]].classList.value=== "red") && (buttons[winningIndices[i][1]].classList.value==="red") && (buttons[winningIndices[i][2]].classList.value==="red")) {
-			winner.innerText = "Red Wins!"
+			winner.innerText = "Red Wins! Press Reset to play again!"
 			console.log("red wins") 
 		} else if (round === 9) {
-			winner.innerText = "it's a tie"
+			winner.innerText = "It's a tie! Press Reset to play again!"
 		}
 	}
 }

@@ -1,11 +1,13 @@
-body {
-
+h1 {
+	margin: 0 auto;
+	width: 40%;
 }
 .container {
 	display: inline-grid;
 	grid-template-rows: 150px 150px 150px;
 	grid-template-columns: 150px 150px 150px;
 	border: 2px solid black;
+	margin: 0 auto;
 }
 
 #one {
@@ -67,4 +69,7 @@ body {
 }
 .red {
 	background-color: red;
+}
+.winner {
+	font-size: 20px;
 }
