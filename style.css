@@ -6,10 +6,9 @@ body {
 	justify-content: center;
 }
 h1 {
-/*	margin: 0 auto;
-	width: 40%;*/
 	font-family: 'Baloo Bhai', cursive;
 	font-size: 50px;
+	margin: 2px;
 }
 .container {
 	display: inline-grid;
@@ -17,61 +16,51 @@ h1 {
 	grid-template-columns: 150px 150px 150px;
 	border: 2px solid black;
 }
-
 #one {
 	grid-row: 1 / span 1;
 	grid-column: 1 / span 1;
 	border: 1px solid black;
 }
-
 #two {
 	grid-row: 1 / span 1;
 	grid-column: 2 / span 1;
 	border: 1px solid black;
 }
-
 #three {
 	grid-row: 1 / span 1;
 	grid-column: 3 / span 1;
 	border: 1px solid black;
 }
-
 #four {
 	grid-row: 2 / span 1;
 	grid-column: 1 / span 1;
 	border: 1px solid black;
 }
-
 #five {
 	grid-row: 2 / span 1;
 	grid-column: 2 / span 1;
 	border: 1px solid black;
 }
-
 #six {
 	grid-row: 2 / span 1;
 	grid-column: 3 / span 1;
 	border: 1px solid black;
 }
-
 #seven {
 	grid-row: 3 / span 1;
 	grid-column: 1 / span 1;
 	border: 1px solid black;
 }
-
 #eight {
 	grid-row: 3 / span 1;
 	grid-column: 2 / span 1;
 	border: 1px solid black;
 }
-
 #nine {
 	grid-row: 3 / span 1;
 	grid-column: 3 / span 1;
 	border: 1px solid black;
 }
-
 .blue {
 	background-color: blue;
 }
@@ -81,13 +70,27 @@ h1 {
 .winner {
 	font-size: 40px;
 	font-family: 'Baloo Bhai', cursive;
+	margin: 0;
+	padding: 0;
 }
 .turn {
 	font-size: 40px;
 	font-family: 'Baloo Bhai', cursive;
-/*	width: 50%;
-	margin: 0 auto;*/
+	margin: 0;
+	padding: 0;
 }
-input[type=submit] {
+.reset {
+	width: 100px;
+	height: 50px;
+	border: 2px solid black;
 	font-family: 'Baloo Bhai', cursive;
+}
+.reset:hover {
+	background-color: yellow;
+}
+.bottom {
+	width: 70%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }

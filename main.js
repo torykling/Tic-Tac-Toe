@@ -41,7 +41,6 @@ function createBoard() {
 }
 createBoard();
 
-
 // reset button clears board
 let reset = document.querySelector("form");
 reset.addEventListener("submit", function(e) {
@@ -53,17 +52,21 @@ reset.addEventListener("submit", function(e) {
 })
 
 function checkForWinners() {
+	let turn = document.querySelector(".turn")
 	let buttons = document.querySelectorAll("button");
 	let winningIndices = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6], [0, 4, 8]];
 	for (let i =0; i < winningIndices.length; i++) {
 		if ((buttons[winningIndices[i][0]].classList.value=== "blue") && (buttons[winningIndices[i][1]].classList.value==="blue") && (buttons[winningIndices[i][2]].classList.value==="blue")) {
-			winner.innerText = "Blue Wins! Press Reset to play again!"
+			winner.innerText = "Blue wins! Press Reset to play again!"
+			turn.innerText = ""
 			console.log("blue wins")
 		} else if ((buttons[winningIndices[i][0]].classList.value=== "red") && (buttons[winningIndices[i][1]].classList.value==="red") && (buttons[winningIndices[i][2]].classList.value==="red")) {
-			winner.innerText = "Red Wins! Press Reset to play again!"
+			winner.innerText = "Red wins! Press Reset to play again!"
+			turn.innerText = ""
 			console.log("red wins") 
 		} else if (round === 9) {
 			winner.innerText = "It's a tie! Press Reset to play again!"
+			turn.innerText = ""
 		}
 	}
 }
