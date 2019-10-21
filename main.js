@@ -42,9 +42,11 @@ reset.addEventListener("submit", function(e) {
 	e.preventDefault();
 	container.innerHTML = "";
 	createBoard();
+	winner.innerText = "";
 })
 
 // figuring out how to check for winners
+let winner = document.querySelector(".winner")
 let buttons = document.querySelectorAll("button");
 function checkForWinners() {
 	// these may need to be zero indexed if I switch from ids to index
@@ -53,11 +55,11 @@ function checkForWinners() {
 	for(let i = 0; i<buttons.length; i++) {
 		buttonClasses.push(buttons[i].classList.value);		
 	}
-	for (let i =0; i <winningIndices.length; i++) {
-		for (let j = 0; j < 3; j++) {
-			if (buttonClasses[winningIndices[i][j]] === "blue") {
-				alert("blue wins")
-			}
+	for (let i =0; i < winningIndices.length; i++) {
+		if ((buttonClasses[winningIndices[i][0]]=== "blue") && (buttonClasses[winningIndices[i][1]]==="blue") && (buttonClasses[winningIndices[i][2]]==="blue")) {
+			winner.innerText = "Blue Wins!"
+		} else if ((buttonClasses[winningIndices[i][0]]=== "red") && (buttonClasses[winningIndices[i][1]]==="red") && (buttonClasses[winningIndices[i][2]]==="red")) {
+			winner.innerText = "Red Wins!"
 		}
 		
 	}
